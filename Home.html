@@ -5,151 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jewelry Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Playfair Display', serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        header img {
-            width: 120px;
-            height: 75px;
-            border-radius: 60%;
-            object-fit: cover;
-            margin: 15px 0 12px;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px 0 0 0;
-            position: relative;
-        }
-
-        nav .search-container {
-            position: absolute;
-            left: 60px;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #ccc;
-        }
-
-        nav .search-container i {
-            font-size: 20px;
-            margin-right: 10px;
-            color: #666;
-        }
-
-        nav .search-container input {
-            border: none;
-            outline: none;
-            font-size: 16px;
-            padding: 5px;
-            width: 150px;
-            color: #666;
-        }
-
-        nav .search-container input::placeholder {
-            color: #aaa;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-nav ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: lighter;
-    text-transform: uppercase;
-}
-
-.main-content {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 20px;
-}
-
-.main-content img {
-    width: 57%; /* Adjust this to 60% for a 60/40 split */
-    height: auto;
-}
-
-.item-list {
-    width: 80%;
-    margin: 20px auto;
-    list-style-type: none;
-    padding: 0;
-}
-
-.item-list li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-.item-list li.hidden {
-    display: none;
-}
-</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
-<img src="Logo/logo.jpg" alt="Crimson Logo">
-<nav>
-    <div class="search-container">
-        <i class="fas fa-search"></i>
-        <input type="text" id="search" placeholder="Search">
-    </div>
-    <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Collection.html">Collection</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="GiftCard.html">Gift Card</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <img src="logo.jpg" alt="Header Image" style="width:8%; height:8%;">
+    <nav>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search" placeholder="Search">
+        </div>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Collection.html">Collection</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="GiftCard.html">Gift Card</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 <section class="main-content">
-<img src="Big Picture/model2.jpg" alt="Model Image"> 
+    <img src="model2.jpg" alt="Model Image" class="model-image">
 </section>
 <main>
-<ul class="item-list" id="itemList">
-    <li>Gold Necklace</li>
-    <li>Silver Ring</li>
-    <li>Diamond Earrings</li>
-    <li>Platinum Bracelet</li>
-    <li>Pearl Pendant</li>
-</ul>
+    <ul class="item-list" id="itemList">
+        <li>Gold Necklace</li>
+        <li>Silver Ring</li>
+        <li>Diamond Earrings</li>
+        <li>Platinum Bracelet</li>
+        <li>Pearl Pendant</li>
+    </ul>
 </main>
 <script>
-document.getElementById('search').addEventListener('input', function() {
-    var filter = this.value.toLowerCase();
-    var items = document.querySelectorAll('#itemList li');
-    items.forEach(function(item) {
-        if (item.textContent.toLowerCase().includes(filter)) {
-            item.classList.remove('hidden');
-        } else {
-            item.classList.add('hidden');
-        }
+    document.getElementById('search').addEventListener('input', function() {
+        var filter = this.value.toLowerCase();
+        var items = document.querySelectorAll('#itemList li');
+        items.forEach(function(item) {
+            if (item.textContent.toLowerCase().includes(filter)) {
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
+            }
+        });
     });
-});
 </script>
 </body>
 </html>

@@ -1,0 +1,108 @@
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    margin: 0 auto; 
+    display: block; 
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.main-content {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start;
+    padding: 10px 20px;
+}
+
+.model-image {
+    width: 60%; /* Adjust to 55% if needed */
+    height: auto;
+    margin: 0; /* Remove auto margins to align to the left */
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0 0;
+    position: relative;
+}
+
+nav .search-container {
+    position: absolute;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+nav .search-container i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #666;
+}
+
+nav .search-container input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+    width: 150px;
+    color: #666;
+}
+
+nav .search-container input::placeholder {
+    color: #aaa;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.main-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.item-list {
+    width: 80%;
+    margin: 20px auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.item-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.item-list li.hidden {
+    display: none;
+}
