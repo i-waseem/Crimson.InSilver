@@ -6,7 +6,7 @@ body {
 
 header {
     background-color: #fff;
-    padding: 10px 0 10px 0; /* Adjust the bottom padding as needed */
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -15,48 +15,9 @@ header img {
     height: 40px; 
     border-radius: 50%; 
     object-fit: cover;
-    margin: 0 auto; 
+    margin: 0 auto 20px auto; /* Adjust the bottom margin as needed */
     display: block; 
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-}
-
-.main-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Center items vertically */
-    padding: 10px 20px;
-    flex-direction: row-reverse; /* Ensure the image is on the right and text is on the left */
-    height: 100vh; /* Make the main content fill the viewport height */
-}
-
-.model-image {
-    width: 60%; /* Adjust to 55% if needed */
-    height: auto;
-    margin: 0;
-}
-
-.text-content {
-    background-color: #f8f8f8; /* Lighter grey color */
-    padding: 10px 20px; /* Adjust padding to control the size */
-    border-radius: 8px;
-    max-width: 400px; /* Adjust max-width to control the width */
-    margin: auto;
-    position: relative;
-    top: 10%; /* Adjust to vertically align the text */
-    transform: translateY(-30%);
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-}
-
-.text-content h2 {
-    margin: 0 0 10px 0;
-    font-size: 19px;
-    text-transform: uppercase;
-}
-
-.text-content p {
-    margin: 0;
-    font-size: 15px;
 }
 
 nav {
@@ -114,25 +75,37 @@ nav ul li a {
 
 .main-content {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px;
+    height: 100vh; /* Make the main content fill the viewport height */
 }
 
-.item-list {
-    width: 80%;
-    margin: 20px auto;
-    list-style-type: none;
-    padding: 0;
+.model-image {
+    width: 60%; /* Adjust to 55% if needed */
+    height: auto;
+    margin: 0;
 }
 
-.item-list li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+.text-content {
+    background-color: #f8f8f8; /* Lighter grey color */
+    padding: 10px 20px; /* Adjust padding to control the size */
+    border-radius: 8px;
+    max-width: 400px; /* Adjust max-width to control the width */
+    margin: auto;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
 }
 
-.item-list li.hidden {
-    display: none;
+.text-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.text-content p {
+    margin: 0;
+    font-size: 15px;
 }
 
 /* New Best Sellers Section */
@@ -149,19 +122,46 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-.best-sellers-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
 }
 
-.best-sellers-list li {
-    margin: 10px;
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 25%; /* 100% divided by the number of items to show (4) */
+    box-sizing: border-box;
+    padding: 10px; /* Add padding for spacing between items */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure images cover the area uniformly */
+    border-radius: 8px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: calc(20% - 40px); /* Adjust width as needed */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
