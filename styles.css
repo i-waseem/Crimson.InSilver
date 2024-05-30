@@ -19,18 +19,46 @@ header img {
     display: block; 
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
+
 .main-content {
     display: flex;
-    justify-content: flex-start; /* Align items to the start */
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
     padding: 10px 20px;
+    flex-direction: row-reverse; /* Ensure the image is on the right and text is on the left */
+    height: 100vh; /* Make the main content fill the viewport height */
 }
 
 .model-image {
     width: 60%; /* Adjust to 55% if needed */
     height: auto;
-    margin: 0; /* Remove auto margins to align to the left */
+    margin: 0;
 }
+
+.text-content {
+    background-color: #f8f8f8; /* Lighter grey color */
+    padding: 10px 20px; /* Adjust padding to control the size */
+    border-radius: 8px;
+    max-width: 400px; /* Adjust max-width to control the width */
+    margin: auto;
+    position: relative;
+    top: 10%; /* Adjust to vertically align the text */
+    transform: translateY(-30%);
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.text-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.text-content p {
+    margin: 0;
+    font-size: 15px;
+}
+
 nav {
     display: flex;
     justify-content: center;
