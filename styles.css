@@ -79,6 +79,7 @@ nav ul li a {
     align-items: center; /* Center items vertically */
     padding: 10px 20px;
     height: 100vh; /* Make the main content fill the viewport height */
+    margin-bottom: 0; /* Reduce bottom margin */
 }
 
 .model-image {
@@ -101,6 +102,7 @@ nav ul li a {
     margin: 0 0 10px 0;
     font-size: 19px;
     text-transform: uppercase;
+    font-weight: lighter; /* Match the font weight of the nav buttons */
 }
 
 .text-content p {
@@ -111,38 +113,44 @@ nav ul li a {
 /* New Best Sellers Section */
 .best-sellers {
     text-align: center;
-    padding: 20px;
+    padding: 10px 10px; /* Adjust padding if needed */
     background-color: #f8f8f8;
-    margin: 20px 0;
+    width: 77%; /* Set the width of the grey background (length) */
+    margin: 10px auto; /* Center the section horizontally with top and bottom margins */
+    max-width: 1300px; /* Optional: Set a max-width to ensure it doesn't get too wide on large screens */
 }
 
 .best-sellers h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    margin-top: 10px; /* Adjust this value to move the title up */
+    font-size: 19px;
     text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter; /* Match the font weight of the nav buttons */
 }
 
 .carousel-container {
-    position: relative;
     max-width: 100%;
     overflow: hidden;
+    margin: 0 auto; /* Center the container */
+    position: relative; /* Ensure arrows are positioned relative to this container */
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
+    margin-top: -20px; /* Adjust this value to move the images up */
 }
 
 .carousel-item {
-    min-width: 25%; /* 100% divided by the number of items to show (4) */
+    flex: 0 0 25%; /* Ensure exactly 4 items fit */
     box-sizing: border-box;
-    padding: 10px; /* Add padding for spacing between items */
-}
+    padding: 10px; /* Add some padding */
+}   
 
 .carousel-item img {
     width: 100%;
-    height: 200px; /* Set a fixed height for uniformity */
-    object-fit: cover; /* Ensure images cover the area uniformly */
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
     border-radius: 8px;
 }
 
