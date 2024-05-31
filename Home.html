@@ -9,22 +9,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <img src="logo.jpg" alt="Header Image" style="width:8%; height:8%;">
-    <nav>
-        <div class="search-container">
-            <i class="fas fa-search"></i>
-            <input type="text" id="search" placeholder="Search">
-        </div>
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="Collection.html">Collection</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="GiftCard.html">Gift Card</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <img src="logo.jpg" alt="Header Image" style="width:8%; height:8%;">
+        <nav>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search" placeholder="Search">
+            </div>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Collection.html">Collection</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="GiftCard.html">Gift Card</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <div class="icon-container">
+                <a href="login.html" class="icon-link"><i class="fas fa-user"></i></a>
+                <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+    </header>    
 <section class="main-content">
     <div class="text-content">
         <h2>Our Collection</h2>
@@ -54,13 +58,13 @@
     </div>
 </section>
 <main>
-    <ul class="item-list" id="itemList">
-        <li>Gold Necklace</li>
-        <li>Silver Ring</li>
-        <li>Diamond Earrings</li>
-        <li>Platinum Bracelet</li>
-        <li>Pearl Pendant</li>
-    </ul>
+    <!-- Map Section -->
+    <section id="map-section">
+        <h2>Our Location</h2>
+        <div id="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13619.444469019336!2d74.2786395291196!3d31.41795232807106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391900e0bd2aec0d%3A0xe2946bae70e2c5e2!2sAbdullah%20Ln%2C%20Block%20E%20Block%20E%201%20Military%20Accounts%20Chs%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2suk!4v1717113131879!5m2!1sen!2suk" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
 </main>
 <script>
     document.getElementById('search').addEventListener('input', function() {
@@ -96,5 +100,3 @@
         carousel.style.transform = `translateX(${offset}px)`;
     }
 </script>
-</body>
-</html>

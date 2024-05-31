@@ -173,3 +173,47 @@ nav ul li a {
 .next {
     right: 10px;
 }
+
+#map-container {
+    padding: 10px 10px; /* Adjust padding if needed */
+    width: 90%; /* Set the width of the grey background (length) */
+    margin: 10px auto; /* Center the section horizontally with top and bottom margins */
+    max-width: 1100px; /* Optional: Set a max-width to ensure it doesn't get too wide on large screens */
+}
+
+#map-section h2 {
+    margin-top: 25px; /* Adjust this value to move the title up */
+    font-size: 19px;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter; /* Match the font weight of the nav buttons */
+    text-align: center;
+}
+
+.icon-container {
+    position: absolute;
+    right: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-container .icon-link {
+    color: #666;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.icon-container .icon-link:first-child {
+    margin-right: 45px; /* Add space between the login icon and the cart icon */
+}
+
+.icon-container .icon-link i {
+    font-size: 20px; /* Match the search icon size */
+    color: #666; /* Match the search icon color */
+}
+
+.icon-container .icon-link:hover {
+    color: #000;
+}
+
+
